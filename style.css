@@ -46,6 +46,7 @@ body{
     height: 8px;
     border-radius: 50%;
     background: #000;
+    transform: translate(-50%, -50%);
     pointer-events: none;
     /* Add effect moving */
     transition: left .2s ease, top .2s ease;
