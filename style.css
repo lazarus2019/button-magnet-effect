@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.button__box{
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+    background: var(--i);
+    box-shadow: 0 0 10px var(--i);
+    /* Add effect for animtion more smoothly */
+    transition: transform .2s linear;
+}
+
+.button__box:not(:last-child){
+    margin-bottom: 3rem;
+}
+
+.button__box span{
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    pointer-events: none;
+    transition: transform .2s linear;
+}
+
+.pointer{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #000;
+    pointer-events: none;
+    /* Add effect moving */
+    transition: left .2s ease, top .2s ease;
+    transition-delay: 0;
+}
+
+/* pointer transform when cursor hover to the button */
+.pointer.buttonHover{
+    transition: .2s ease;
+    transform: scale(6);
+    background: #fff;
+    opacity: .2;
+}
